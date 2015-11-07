@@ -1,8 +1,8 @@
 angular.module('dbpradha', [])
     .constant('API', {
-        'getProducts': 'http://localhost/api/products.php',
-        'getUser': 'http://localhost/api/user.php',
-        'placeOrder': 'http://localhost/api/placeorder.php'
+        'getProducts': 'http://ecs-test.dipenpradhan.com/api/products.php',
+        'getUser': 'http://ecs-test.dipenpradhan.com/api/user.php',
+        'placeOrder': 'http://ecs-test.dipenpradhan.com/api/placeorder.php'
     })
     .run(function(API, $http, $q, $rootScope) {
 

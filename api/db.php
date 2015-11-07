@@ -1,5 +1,5 @@
 <?php
-	$link = mysql_connect("localhost:33306" , "root", "root");
+	$link = mysql_connect("localhost:33306" , "ecs", "1234");
 	
 	if ($link == false) {
 		echo "Error: can't connect to database server";

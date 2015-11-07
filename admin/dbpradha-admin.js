@@ -1,9 +1,9 @@
 angular.module('dbpradha-admin', ['ngRoute'])
         .constant('API', {
-            getAdmin: 'http://localhost/api/admin.php',
-            getOrders: 'http://localhost/api/orders.php',
-            getOrder: 'http://localhost/api/orders.php',
-            approveOrder: 'http://localhost/api/approveorder.php'
+            getAdmin: 'http://ecs-test.dipenpradhan.com/api/admin.php',
+            getOrders: 'http://ecs-test.dipenpradhan.com/api/orders.php',
+            getOrder: 'http://ecs-test.dipenpradhan.com/api/orders.php',
+            approveOrder: 'http://ecs-test.dipenpradhan.com/api/approveorder.php'
         })
         .config(function ($routeProvider) {
             $routeProvider
@@ -64,7 +64,7 @@ angular.module('dbpradha-admin', ['ngRoute'])
                 $scope.approveOrder = function (id) {
                     $http.get(API.approveOrder, {params: {order_id: id}}).success(function () {
                         
-                        window.location.href = 'http://localhost/admin/#/orders/processed';
+                        window.location.href = 'http://ecs-test.dipenpradhan.com/admin/#/orders/processed';
                     }).error(function () {
                         alert('Couldn\'t approve.');
                     });
@@ -94,7 +94,7 @@ angular.module('dbpradha-admin', ['ngRoute'])
 
                 $scope.approveOrder = function (id) {
                     $http.get(API.approveOrder, {params: {order_id: id}}).success(function () {
-                        window.location.href = 'http://localhost/admin/#/orders/processed';
+                        window.location.href = 'http://ecs-test.dipenpradhan.com/admin/#/orders/processed';
                     }).error(function () {
                         alert('Couldn\'t approve.');
                     });
