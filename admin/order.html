@@ -1,0 +1,25 @@
+<h1>Order ID: {{order.id}}</h1>
+<hr>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Items</td>
+            <td>User</td>
+            <td>Status</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{order.id}}</td>
+            <td>{{order.items}}</td>
+            <td>{{order.name}}</td>
+            <td>{{order.status}}</td>
+            <td>
+                <button ng-click="approveOrder(order.id)" class="btn btn-success" ng-if="order.status === 'pending'">Approve</button>
+                <button class="btn btn-success" disabled ng-if="order.status === 'processed'">Approved</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
